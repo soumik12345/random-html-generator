@@ -326,6 +326,9 @@ const randomSample = (m, n, rng) => {
     @arg {Object} s - The structure in question.
     @return {string} HTML.
     */
+
+    //When I wrote this, only God and I understood what I was doing
+    //Now, God only knows
     const renderHTML = options => s => ((prefix, newline) => (typeof s == 'string')
         ? prefix + (options.encodeEntities ? s.replace(/['"<>&]/g, encodeEntity): s) + newline
         : (s.name.toLowerCase() == '!doctype') ? (prefix + '<' + s.name + ' ' + s.children[0] + '>')
